@@ -1,20 +1,23 @@
 <script>
 	export let name;
 	import Header from "./Header.svelte";
+	import FeedMenu from "./FeedMenu.svelte";
+	import Feed from "./Feed.svelte";
 </script>
 
 <main>
 	<Header/>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<FeedMenu/>
+	<Feed/>	
 </main>
 
 <style>
 	main {
 		text-align: center;
-		padding: 1em;
 		max-width: 240px;
+		padding: 0;
 		margin: 0 auto;
+		background-color: #3f3f40;
 	}
 
 	h1 {
