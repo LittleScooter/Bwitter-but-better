@@ -1,5 +1,9 @@
+<script>
+    import Tweet from "./Tweet.svelte";
+</script>
+
 <main>
-    <p>insert feed here</p>
+    <Tweet/>
 </main>
 
 <style>
