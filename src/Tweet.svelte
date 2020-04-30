@@ -6,7 +6,7 @@
     main
     {
         width: 100%;
-        height: 50px;
-        background-color: teal;
+        height: 180px;
+        background-color: teal; 
     }
 </style>

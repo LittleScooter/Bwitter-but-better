@@ -44,8 +44,8 @@
     <Header />
     <FeedMenu />
     <PersonalFeed />
-  {:else if pageName == '#login'}
-    <Login />
+  <!-- {:else if pageName == '#login'}
+    <Login /> -->
   {:else}
     <Header />
     <FeedMenu />
