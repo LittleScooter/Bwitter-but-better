@@ -5,10 +5,13 @@
   import Feed from "./Feed.svelte";
   import PersonalFeed from "./PersonalFeed.svelte";
   import GlobalFeed from "./GlobalFeed.svelte";
+  import LoginPage from "./LoginPage.svelte";
+  import RegistrationPage from "./RegistrationPage.svelte";
 
-  let pageName = "";
+  let pageName = location.hash;
 
   window.onhashchange = () => (pageName = location.hash);
+
 </script>
 
 <style>
@@ -44,8 +47,12 @@
     <Header />
     <FeedMenu />
     <PersonalFeed />
-  <!-- {:else if pageName == '#login'}
-    <Login /> -->
+  {:else if pageName == '#Login'}
+    <LoginPage/>
+  {:else if pageName == '#Register'}
+    <Header />
+    <FeedMenu />
+    <PersonalFeed />
   {:else}
     <Header />
     <FeedMenu />

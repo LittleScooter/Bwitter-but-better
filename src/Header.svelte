@@ -1,6 +1,7 @@
 <main>
-<button id="headBtn">Log in</button>
-<button id="headBtn">Sign up</button>
+
+<a id="headBtn" href="#Login">Log in</a>
+<a id="headBtn" href="#Register">Sign up</a>
 </main>
 
 <style>
