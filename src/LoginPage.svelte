@@ -1,5 +1,5 @@
 <script>
-    import {APICall} from "./APIHandler.js";;
+    import {APICall} from "./APIHandler.js";
 
     let email="";
     let code = "";
@@ -10,10 +10,16 @@
         const data = {
             email: email
         };
-        fetchResponse = await APICall("/login",data);
+        const fetchResponse = await APICall("/login",data);
         console.log(fetchResponse);
-        verify=true;
+        
         console.log(fetchResponse);
+        if(fetchResponse.error){
+
+        }
+        else{
+            verify=true;
+        }
         }
         catch(err){
             console.log(err)
@@ -21,13 +27,14 @@
         
     };
     async function verifyWithCode(e){
-
-        fetchResponse = await APICall("/verifyWithCode",code)
+        e.preventDefault();
+        const fetchResponse = await APICall("/verifyWithCode",{code:code})
         console.log(fetchResponse);
         if (fetchResponse.error) {
             alert("ERROR");
         } else {
-            alert("Du är inloggad");
+            alert("Du är registered");
+            location.hash="#personal"
         }
     }
 </script>

@@ -1,5 +1,10 @@
+<script>
+    export let text;
+
+</script>
+
 <main>
-    <p>rojotrhjorh</p>
+    {text}
 </main>
 
 <style>
