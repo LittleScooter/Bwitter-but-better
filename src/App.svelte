@@ -16,19 +16,19 @@
   window.onhashchange = () => (pageName = location.hash);
 
 AutoDirect();
- async function AutoDirect(){
-   console.log("DO you see this");
-   const response = await  APICall("/userInfo");
-   console.log("Reponse");
-   if(response.error){
+  async function AutoDirect(){
+  console.log("DO you see this");
+  const response = await APICall("/userInfo");
+  console.log("Reponse");
+  if(response.error){
      // Inte inloggad
      location.hash="#global";
-   }
-   else{
+  }
+  else{
      // inloggad
      location.hash="#personal";
-   }
- }
+  }
+}
 </script>
 
 <style>
